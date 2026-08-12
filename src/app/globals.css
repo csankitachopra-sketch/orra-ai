@@ -3,38 +3,42 @@
 @tailwind utilities;
 
 :root {
-  /* Calm, peaceful-to-the-eyes palette */
-  --orra-bg: #F7F5F2;
-  --orra-bg-elevated: #FFFFFF;
-  --orra-surface: #F0EDE8;
-  --orra-border: #E5E0D8;
-  --orra-text: #2C2A28;
-  --orra-text-soft: #6B6560;
-  --orra-text-muted: #9A948C;
-  --orra-accent: #7A8B74;
-  --orra-accent-soft: #E8EDE6;
+  /* Warmer, peace-to-the-eyes palette */
+  --orra-bg: #F8F5F1;
+  --orra-bg-elevated: #FFFCF9;
+  --orra-surface: #F3EDE6;
+  --orra-border: #E8E0D6;
+  --orra-text: #2F2B27;
+  --orra-text-soft: #6E675F;
+  --orra-text-muted: #9C948A;
+  --orra-accent: #A67C5D;
+  --orra-accent-soft: #F3E8DE;
   --orra-warm: #C4A484;
-  --orra-warm-soft: #F5EFE6;
+  --orra-warm-soft: #F6EFE6;
+  --orra-sage: #7A8B74;
+  --orra-sage-soft: #E8EDE6;
   --orra-success: #6B8F71;
-  --orra-radius: 16px;
-  --orra-radius-sm: 12px;
-  --orra-shadow: 0 1px 3px rgba(44, 42, 40, 0.04), 0 4px 12px rgba(44, 42, 40, 0.03);
-  --orra-shadow-soft: 0 2px 8px rgba(44, 42, 40, 0.06);
+  --orra-radius: 18px;
+  --orra-radius-sm: 14px;
+  --orra-shadow: 0 1px 3px rgba(47, 43, 39, 0.04), 0 6px 16px rgba(47, 43, 39, 0.04);
+  --orra-shadow-soft: 0 2px 10px rgba(47, 43, 39, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --orra-bg: #1A1917;
-    --orra-bg-elevated: #242220;
-    --orra-surface: #2C2A28;
-    --orra-border: #3A3734;
-    --orra-text: #F5F2ED;
-    --orra-text-soft: #B0AAA3;
-    --orra-text-muted: #7A746C;
-    --orra-accent: #9AAD92;
-    --orra-accent-soft: #2A3228;
+    --orra-bg: #1C1916;
+    --orra-bg-elevated: #26221E;
+    --orra-surface: #2E2A26;
+    --orra-border: #3D3833;
+    --orra-text: #F6F1EA;
+    --orra-text-soft: #B5ADA3;
+    --orra-text-muted: #7F776E;
+    --orra-accent: #C9A48A;
+    --orra-accent-soft: #3A322B;
     --orra-warm: #D4B896;
-    --orra-warm-soft: #2E2A24;
+    --orra-warm-soft: #322C25;
+    --orra-sage: #9AAD92;
+    --orra-sage-soft: #2A3228;
   }
 }
 
@@ -94,10 +98,10 @@ body {
 .message-user {
   background: var(--orra-accent);
   color: white;
-  border-radius: 18px 18px 4px 18px;
+  border-radius: 20px 20px 6px 20px;
 }
 .message-ai {
   background: var(--orra-bg-elevated);
   border: 1px solid var(--orra-border);
-  border-radius: 18px 18px 18px 4px;
+  border-radius: 20px 20px 20px 6px;
 }
