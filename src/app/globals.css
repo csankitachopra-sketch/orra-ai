@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Calm, peaceful-to-the-eyes palette */
+  --orra-bg: #F7F5F2;
+  --orra-bg-elevated: #FFFFFF;
+  --orra-surface: #F0EDE8;
+  --orra-border: #E5E0D8;
+  --orra-text: #2C2A28;
+  --orra-text-soft: #6B6560;
+  --orra-text-muted: #9A948C;
+  --orra-accent: #7A8B74;
+  --orra-accent-soft: #E8EDE6;
+  --orra-warm: #C4A484;
+  --orra-warm-soft: #F5EFE6;
+  --orra-success: #6B8F71;
+  --orra-radius: 16px;
+  --orra-radius-sm: 12px;
+  --orra-shadow: 0 1px 3px rgba(44, 42, 40, 0.04), 0 4px 12px rgba(44, 42, 40, 0.03);
+  --orra-shadow-soft: 0 2px 8px rgba(44, 42, 40, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --orra-bg: #1A1917;
+    --orra-bg-elevated: #242220;
+    --orra-surface: #2C2A28;
+    --orra-border: #3A3734;
+    --orra-text: #F5F2ED;
+    --orra-text-soft: #B0AAA3;
+    --orra-text-muted: #7A746C;
+    --orra-accent: #9AAD92;
+    --orra-accent-soft: #2A3228;
+    --orra-warm: #D4B896;
+    --orra-warm-soft: #2E2A24;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--orra-bg);
+  color: var(--orra-text);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orra-border);
+  border-radius: 3px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .orra-card {
+    background: var(--orra-bg-elevated);
+    border: 1px solid var(--orra-border);
+    border-radius: var(--orra-radius);
+    box-shadow: var(--orra-shadow);
+  }
+  .orra-soft {
+    background: var(--orra-surface);
+    border-radius: var(--orra-radius-sm);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--orra-accent);
+  outline-offset: 2px;
+}
+
+.message-user {
+  background: var(--orra-accent);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+.message-ai {
+  background: var(--orra-bg-elevated);
+  border: 1px solid var(--orra-border);
+  border-radius: 18px 18px 18px 4px;
+}
